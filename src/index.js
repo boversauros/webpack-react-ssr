@@ -1,10 +1,13 @@
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
 import "./style.css";
-console.log("Hello Webpack!");
 
-const fancyFunc = () => {
-  return [1, 2];
-};
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 
-const [a, b] = fancyFunc();
-
-console.log("wow", { a, b });
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
